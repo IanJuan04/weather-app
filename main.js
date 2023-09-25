@@ -6,9 +6,11 @@ const form = document.querySelector("form");
 
 async function main(e) {
   e.preventDefault();
-  if (location === "") return;
 
   const location = document.getElementById("search").value;
+
+  if (location === "") return;
+
   const apiKey = "69fee1bc80096fbb98a22448d13f3b4a";
   const weatherApiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
   const weatherData = await fetchData(weatherApiUrl);

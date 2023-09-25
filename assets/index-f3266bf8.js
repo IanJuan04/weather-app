@@ -9,4 +9,4 @@
     <p class="date">${new Date}</p>
   </div>
 </article >
-  `;r.innerHTML+=n}const l=document.querySelector("form");async function d(a){if(a.preventDefault(),r==="")return;const r=document.getElementById("search").value,n=`http://api.openweathermap.org/data/2.5/weather?q=${r}&appid=69fee1bc80096fbb98a22448d13f3b4a`,e=await i(n),t=`https://openweathermap.org/img/wn/${e.weather[0].icon}.png`;s({weatherData:e,weatherIcon:t})}l.addEventListener("submit",d);
+  `;r.innerHTML+=n}const l=document.querySelector("form");async function d(a){a.preventDefault();const r=document.getElementById("search").value;if(r==="")return;const n=`http://api.openweathermap.org/data/2.5/weather?q=${r}&appid=69fee1bc80096fbb98a22448d13f3b4a`,e=await i(n),t=`https://openweathermap.org/img/wn/${e.weather[0].icon}.png`;s({weatherData:e,weatherIcon:t})}l.addEventListener("submit",d);
